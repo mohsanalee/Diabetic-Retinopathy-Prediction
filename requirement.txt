@@ -1,5 +1,22 @@
-flask
+# RetinaCare AI - Backend Dependencies
+# Diabetic Retinopathy Screening System
+#
+# Install with:
+#   pip install -r requirement.txt
+#
+# Note:
+# TensorFlow version is intentionally not pinned here because the existing
+# DR_version1.h5 model is already working in the current environment.
+# Once the working environment is verified, exact versions can be pinned
+# for reproducible deployment.
+
+Flask
+Flask-Cors
 tensorflow
 numpy
-pillow
-werkzeug
+Pillow
+Werkzeug
+python-dotenv
+
+# Production server (use when deploying the Flask backend)
+gunicorn
