@@ -1,0 +1,5 @@
+1) Intall Python With 2 tick When Open The Setup File
+2) Install Python in VS Code As Extension
+3) Flask 
+4) Tensorflow 
+5) Pillow 
