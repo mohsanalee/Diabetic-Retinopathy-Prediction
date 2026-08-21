@@ -28,6 +28,7 @@ out/
 
 # Frontend environment files
 *.local
+frontend/next-env.d.ts
 
 # ==========================================
 # Editors / OS
@@ -48,3 +49,11 @@ yarn-debug.log*
 pnpm-debug.log*
 
 backend/app_backup.py
+# Local screening uploads
+backend/static/uploads/*
+
+# Local backup files
+frontend/app/page.phase1-*.tsx
+
+# Use pnpm lockfile as the project lockfile
+package-lock.json
