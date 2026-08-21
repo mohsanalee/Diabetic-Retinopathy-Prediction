@@ -40,8 +40,32 @@ type ScreeningRecord = {
   tone: 'success' | 'warning'
 }
 
+type TeamMember = {
+  name: string
+  role: string
+  description: string
+}
+
 const TEAM_NAME = 'Ahad Dev Team'
 const API_URL = 'http://127.0.0.1:5000/api/predict'
+
+const TEAM_MEMBERS: TeamMember[] = [
+  {
+    name: 'Abdul Ahad',
+    role: 'Team Leader ',
+    description: 'ROLL NO : IT-0123-008',
+  },
+  {
+    name: 'Anees Ahmed',
+    role: '',
+    description: 'ROLL NO : IT-0123-049',
+  },
+  {
+    name: 'Shahzaman',
+    role: '',
+    description: 'ROLL NO : IT-0123-081',
+  },
+]
 
 function Logo() {
   return (
@@ -231,12 +255,12 @@ function LandingPage({ onEnter }: { onEnter: () => void }) {
           </div>
 
           <div className="team-grid">
-            {['Team member 01', 'Team member 02', 'Team member 03'].map((member, index) => (
-              <article className="team-card" key={member}>
+            {TEAM_MEMBERS.map((member, index) => (
+              <article className="team-card" key={member.name}>
                 <div className="team-avatar">0{index + 1}</div>
-                <span className="team-role">Ahad Dev Team</span>
-                <h3>{member}</h3>
-                <p>Team member details can be added here when the final names and roles are provided.</p>
+                <span className="team-role">{member.role}</span>
+                <h3>{member.name}</h3>
+                <p>{member.description}</p>
               </article>
             ))}
           </div>
